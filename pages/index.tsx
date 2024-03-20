@@ -43,7 +43,7 @@ const products = {
 /**
  * Tasks
  * 1. Add types to the products object to ensure that the properties are always present and of the correct type.
- * 2. Create a card component for the product card & show all 3 products using it.
+ * 2. Create a card component for the product card & show all 3 products using it. Note: Product data should be passed as props to the card component.
  * 3. Update CTA to open link in a new tab
  * 4. Add a useEffect to call the getRecipe function on page load, making use of the axios library to fetch the recipe data from the API. The function just needs to console.log the response data.
  * Endpoint URL: https://api.spoonacular.com/recipes/716429/information?apiKey=18ecbaa6f37b4f2d8df991c236fc7c25
