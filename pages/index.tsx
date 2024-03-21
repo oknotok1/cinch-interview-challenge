@@ -10,11 +10,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 /**
  * Tasks
  * 1. Add types to the products object to ensure that the properties are always present and of the correct type.
- * 2. Create a card component for the product card & show all 3 products using it. Note: Product data should be passed as props to the card component. Iterating of the products object should be done in the parent component.
+ *
+ * 2. Create a component named ProductCard, for the product card & show all 3 products using it.
+ * Note: The product object should be passed as props into ProductCard. Iterating of the products object should be done in the parent component. As such, you should only be passing a product instance as an argument.
+ *
  * 3. Update CTA to open link in a new tab
- * 4. Add a useEffect to call the getRecipe function on page load, making use of the axios library to fetch the recipe data from the API. The function just needs to console.log the response data.
+ *
+ * 4. Create a function called getReceipt that fetches the recipe information using the axios library from the endpoint URL provided below. The function is only required to log recipe information in the browser's console. The function is to be called with a useEffect when the component mounts.
  * Endpoint URL: https://api.spoonacular.com/recipes/716429/information?apiKey=18ecbaa6f37b4f2d8df991c236fc7c25
- * 5. Implement jest tests for the getRecipe function
+ *
+ * 5. Implement unit tests for the getRecipe function using framework of your choice (e.g. Jest, Mocha, Cypress, etc)
+ *
+ * Note:
+ * - You are allowed to use any library or framework to complete the tasks
+ * - You are allowed to use any online resources & documentations to complete the tasks (e.g. NextJS, ReactJS, TypeScript, StackOverflow, MDN, etc)
  */
 
 const inter = Inter({ subsets: ["latin"] });
