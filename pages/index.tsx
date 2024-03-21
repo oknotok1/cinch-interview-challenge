@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Button, Card, CardBody } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import { useEffect } from "react";
 
 // UI Exercise: https://cantunsee.space/ - Attempt till Hard only
 
@@ -17,10 +19,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
  * 5. Implement jest tests for the getRecipe function
  */
 
+export interface Products {
+  [key: string]: Product;
+}
+
+export interface Product {
+  name: string;
+  price: number;
+  imageUrl: string;
+  description: string;
+  link: string;
+}
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const products = {
+  const products: Products = {
     "sph-sam-gals24ultra-ttg": {
       name: "Samsung Galaxy S21 Ultra",
       price: 1199.99,
@@ -51,6 +65,23 @@ export default function Home() {
     },
   };
 
+  const getRecipe = async () => {
+    await axios
+      .get(
+        "https://api.spoonacular.com/recipes/716429/information?apiKey=18ecbaa6f37b4f2d8df991c236fc7c25"
+      )
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    getRecipe();
+  }, []);
+
   return (
     <>
       <Head>
@@ -62,28 +93,35 @@ export default function Home() {
 
       <main className={`${styles.main} ${inter.className}`}>
         <h1>Cinch Simple Project</h1>
-
-        <section className={styles.products}>
-          <Card>
-            <CardBody>
-              <Image
-                src={products["sph-sam-gals24ultra-ttg"].imageUrl}
-                alt="Samsung Galaxy S24 Ultra"
-                width={300}
-                height={200}
-              />
-              <h2>{products["sph-sam-gals24ultra-ttg"].name}</h2>
-              <p>{products["sph-sam-gals24ultra-ttg"].description}</p>
-              <Button
-                color="primary"
-                href={products["sph-sam-gals24ultra-ttg"].link}
-              >
-                Buy now
-              </Button>
-            </CardBody>
-          </Card>
-        </section>
+        {Object.keys(products).map((key) => {
+          const product = products[key];
+          return <ProductCard product={product} key={key} />;
+        })}
+        <section className={styles.products}></section>
       </main>
     </>
   );
 }
+
+const ProductCard = ({ product }: { product: Product }) => {
+  return (
+    <Card>
+      <CardBody>
+        <Image
+          src={product.imageUrl}
+          alt="Samsung Galaxy S24 Ultra"
+          width={300}
+          height={200}
+        />
+        <h2>{product.name}</h2>
+        <p>{product.description}</p>
+        <Button
+          color="primary"
+          onClick={() => window.open(product.link, "_blank")}
+        >
+          Buy now
+        </Button>
+      </CardBody>
+    </Card>
+  );
+};
