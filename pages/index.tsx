@@ -124,10 +124,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         />
         <h2>{product.name}</h2>
         <p>{product.description}</p>
-        <Button
-          color="primary"
-          onClick={() => window.open(product.link, "_blank")}
-        >
+        <Button color="primary" href={product.link} target="_blank">
           Buy now
         </Button>
       </CardBody>
