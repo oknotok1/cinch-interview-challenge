@@ -16,7 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
  *
  * 3. Update CTA to open link in a new tab
  *
- * 4. Create a function called getReceipt that fetches the recipe information using the axios library from the endpoint URL provided below. The function is only required to log recipe information in the browser's console. The function is to be called with a useEffect when the component mounts.
+ * 4. Create a function called getRecipe that fetches the recipe information using the axios library from the endpoint URL provided below. The function is only required to log recipe information in the browser's console. The function is to be called with a useEffect when the component mounts.
  * Endpoint URL: https://api.spoonacular.com/recipes/716429/information?apiKey=18ecbaa6f37b4f2d8df991c236fc7c25
  *
  * 5. Implement unit tests for the getRecipe function using framework of your choice (e.g. Jest, Mocha, Cypress, etc)
