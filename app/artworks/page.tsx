@@ -1,4 +1,4 @@
-import ArtworkCard from "@/app/components/ArtworkCard";
+import ArtworkCard from "@/app/artworks/components/ArtworkCard";
 import BasicPagination from "@/app/components/Pagination";
 import { ArticResponse, Artwork } from "@/types/Artwork";
 

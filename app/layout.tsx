@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cinch Simple Project",
+  title: "A Simple Project",
   description: "A Next.js App Router project",
 };
 

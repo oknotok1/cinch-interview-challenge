@@ -3,7 +3,7 @@ import Link from "next/link";
 export default async function Home() {
   return (
     <div className="max-w-[1400px] mx-auto p-4 lg:p-8 flex flex-col gap-4 items-start">
-      <h1 className="text-4xl">Cinch Simple Project</h1>
+      <h1 className="text-4xl">A Simple Project</h1>
       <p>There are three pages in this project.</p>
       <Link
         href="/recipes"
