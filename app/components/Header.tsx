@@ -4,7 +4,7 @@ const Header = () => (
   <header>
     <nav className="bg-gray-800 w-full h-[64px] flex items-center justify-between px-6">
       <Link href="/" className="text-xl">
-        Cinch Simple Project
+        A Simple Project
       </Link>
       <ul className="flex gap-6">
         <li>
