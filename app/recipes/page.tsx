@@ -1,6 +1,6 @@
 import recipes from "@/data/recipes";
-
 import RecipeCard from "@/app/components/RecipeCard";
+import type { Recipe } from "@/types/Recipe";
 
 const generateRandomRecipeIds = (count: number) => {
   const randomRecipeIds = [];
@@ -11,7 +11,7 @@ const generateRandomRecipeIds = (count: number) => {
   return randomRecipeIds;
 };
 
-export default async function Home() {
+export default async function Recipes() {
   // const baseUrl = "https://api.spoonacular.com";
   // const path = "/recipes/informationBulk";
   // const apiKey = process.env.NEXT_PUBLIC_SPOONACULAR_API_KEY;
@@ -35,7 +35,7 @@ export default async function Home() {
         Here are some delicious recipes from Spoonacular for you to explore.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-2">
-        {recipes.map((recipe: any) => (
+        {recipes.map((recipe: Recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
       </div>
