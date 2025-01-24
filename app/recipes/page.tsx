@@ -1,5 +1,5 @@
 import recipes from "@/data/recipes";
-import RecipeCard from "@/app/components/RecipeCard";
+import RecipeCard from "@/app/recipes/components/RecipeCard";
 import type { Recipe } from "@/types/Recipe";
 
 const generateRandomRecipeIds = (count: number) => {
