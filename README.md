@@ -9,20 +9,24 @@ https://interview-challenge-gold.vercel.app/
 
 # Task 2A - Employee Of The Month Instructions (30 minutes)
 
-## API Documentation
+## Useful Documentation Links
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Random User Generator API Documentation](https://randomuser.me/documentation)
 
 ## Requirements
 
 ### 1. Fetch Data
 
-- Fetch **20** random users from the Random User Generator API.
+- Fetch **20** random users from the Random User Generator API
+- Perform the API fetch in the `/app/employees-of-the-month/page` component
+- Iterate through the response data & pass the parsed response data as props to the `EmployeeCard` component to render each user's information **individually**
 
 ### 2. Generate TypeScript Types
 
 - Generate the TypeScript types for the API response.
 - Save the types in `/types/RandomPerson.d.ts`.
+- _Optional if unfamiliar with TypeScript_
 
 ### 3. Create the `EmployeeCard` Component
 
@@ -30,32 +34,43 @@ https://interview-challenge-gold.vercel.app/
 
   1. **Name & Title**
 
-     - Combine the following fields: `name.first`, `name.last`, and `name.title`.
-     - Format: `"firstName lastName (title)"`.
+     - Display the user's first name, last name & title.
+       - Example: **John Doe (Mr)**
+       - Format: `name.first` `name.last` (`title`).
 
-  2. **Avatar with Status Indicator**
+  3. **Avatar with Status Indicator**
 
      - Display the user's avatar image using `picture.large`.
      - Add a status indicator (online/offline) based on a randomly generated boolean value.
 
-  3. **Location**
+  4. **Location**
 
-     - Show the user's `city` and `state`.
+     - Display the user's city & state.
+       - Example: **Springfield, Illinois**
+       - Format: `city`, `state`.
 
-  4. **Email Address**
+  5. **Email Address**
 
-     - Display the user's `email` with the Email MUI Icon.
+     - Display the user's email address
+       - Example: **john.doe@email.com**
+       - Format: `email`
      - Clicking the icon should open the user's email client.
+     - Add the Email MUI Icon before the value.
 
-  5. **Date of Birth & Age**
+  7. **Date of Birth & Age**
 
-     - Display the date of birth in the `DD MMM YYYY` format using `dob.date`.
-     - Show the user's `age` from `dob.age`.
+     - Display the date of birth and age
+       - Example: **22 Jun 1967 (57 years old)**
+       - Format: `DD MMM YYY (00 years old)`
+       - keys: `dob.date`, `dob.age`
+     - Add the Cake MUI Icon before the value
 
-  6. **Time Zone Information**
+  8. **Time Zone Information**
 
-     - Show the user's `timezone.offset` and `timezone.description` in `UTC±X` format.
-     - Use the AccessTime MUI Icon for this information.
+     - Display the user's location & timezone offset based on the user's timezone information
+       - Example: **Newfoundland (UTC -3:30)**
+       - Format: `timezone.description UTC±X(timezone.offset)`
+     - Add the AccessTime MUI Icon before the value
 
 ### 4. Truncation and Tooltips
 
