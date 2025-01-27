@@ -2,7 +2,14 @@
 
 https://interview-challenge-gold.vercel.app/
 
-# Employee Of The Month Instructions (Task 1)
+# Task 1 - UI/UX Challenge (10 minutes)
+
+- You'll be presented with two options and must choose the one that aligns best with design and UI/UX principles.
+- The challenge has three difficulty levels: easy, medium, and hard.
+- You have 10 minutes to complete as many stages as you can.
+- Get started here: [Can't Unsee](https://cantunsee.space/)
+
+# Task 2A - Employee Of The Month Instructions (30 minutes)
 
 ## API Documentation
 
@@ -12,7 +19,7 @@ https://interview-challenge-gold.vercel.app/
 
 ### 1. Fetch Data
 
-- Fetch 20 random users from the Random User Generator API.
+- Fetch **20** random users from the Random User Generator API.
 
 ### 2. Generate TypeScript Types
 
@@ -77,7 +84,7 @@ https://interview-challenge-gold.vercel.app/
 
 ---
 
-# RecipeCard Page Instructions (Task 2)
+# Task - 2B RecipeCard Page Instructions (30 minute)
 
 ## Requirements
 
